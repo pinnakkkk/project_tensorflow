@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<head>
+  <title>Some title</title>
+  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+<body>
+  <h2>RNN Text Review Model</h2>
+  <form action="/text" method="post">
+    Enter a text for review: Upto 250 words<br>
+    <input type="text" name="text_input" value="">
+    <br>
+    <input type="submit" value="Submit">
+  </form>
+    <br>
+    score: {{ comments }} 
+</body>
+</html>
