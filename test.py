@@ -40,7 +40,7 @@ def main():
         # if predict(text) > 50:
         #     print("(score):",predict(text)," Positive")
 
-    return render_template('index.html', comments=score)
+    return render_template('"templates/index.html"', comments=score)
 
 if __name__ == '__main__':
     app.run(port=3000, debug=True)
