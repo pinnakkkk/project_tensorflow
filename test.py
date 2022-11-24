@@ -13,13 +13,13 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-   return render_template("index.html")    
+   return render_template("templates/index.html")    
 
 @app.route('/text', methods=['GET','POST'])
 def main():
     MAXLEN = 250
 
-    model = tf.keras.models.load_model('/home/lazylinuxer/tensorflow_projects/project_tensor/rnn_text_review.h5')
+    model = tf.keras.models.load_model('rnn_text_review.h5')
     word_index = imdb.get_word_index()
 
     def encode_text(text):
